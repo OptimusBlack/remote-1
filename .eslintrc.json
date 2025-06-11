@@ -1,0 +1,84 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "unused-imports",
+    "react-hooks"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "max-len": ["warn", { "code": 180 }],
+    "semi":"off",
+    "@typescript-eslint/semi": ["error", "never"],
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "semi",
+        "requireLast": true
+      },
+      "singleline": {
+        "delimiter": "semi",
+        "requireLast": false
+      }
+    }],
+    "no-param-reassign": "off",
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "multiline": true, "minProperties": 4 },
+      "ObjectPattern": { "multiline": true, "minProperties": 4 },
+      "ImportDeclaration": { "multiline": true, "minProperties": 4 },
+      "ExportDeclaration": { "multiline": true, "minProperties": 4 }
+    }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "consistent-return": "off",
+    "prefer-template": "error",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/destructuring-assignment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-unused-vars" : "off",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+  }
+}
