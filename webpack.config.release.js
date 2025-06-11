@@ -1,4 +1,3 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 const ExternalTemplateRemotesPlugin = require('external-remotes-plugin')
@@ -16,7 +15,7 @@ module.exports = {
   context: srcPath,
   mode: 'production',
   devtool: false,
-  entry: './index',
+  entry: './Main',
   output: {
     clean: true,
     pathinfo: false,
