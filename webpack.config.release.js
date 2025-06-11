@@ -64,7 +64,7 @@ module.exports = {
       name: MODULE_NAME,
       filename: 'remoteEntry.js',
       remotes: {
-        appshell: 'appshell@https://appshell-seven.vercel.app/remote1/remoteEntry.js',
+        appshell: 'appshell@https://appshell-seven.vercel.app/remote1/remoteEntry.js?[window.cacheHash]',
       },
       exposes: { './Main': './Main' },
       shared: {
@@ -78,6 +78,7 @@ module.exports = {
           requiredVersion: deps['react-dom'],
         },
       },
-    })
+    }),
+    new ExternalTemplateRemotesPlugin(),
   ],
 }
