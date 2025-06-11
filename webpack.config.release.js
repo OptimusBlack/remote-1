@@ -20,7 +20,7 @@ module.exports = {
     clean: true,
     pathinfo: false,
     path: dstPath,
-    publicPath: '/',
+    publicPath: 'https://remote-1-five.vercel.app/',
     uniqueName: MODULE_NAME,
     filename: '[name].[contenthash].js',
   },
